@@ -4,8 +4,31 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "prepare": "husky install"
   },
   "author": "Abhijeet",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "babel-eslint": "^10.1.0",
+    "eslint": "^7.28.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-json": "^3.0.0",
+    "husky": "^6.0.0",
+    "lint-staged": "^11.0.0",
+    "prettier": "^2.3.1"
+  },
+  "lint-staged": {
+    "app/**/*.{html,md,js,jsx,json,yml}": [
+      "prettier --write",
+      "eslint --fix"
+    ]
+},
+"husky": {
+  "hooks": {
+    "pre-commit": "lint-staged"
+  }
 }
+
+}
+
