@@ -1,5 +1,5 @@
 function removeTransition(event) {
-    if (event.propertyName !== 'transform') return; // skip it if it's not a transform
+    if (event.propertyName !== 'transform') return; // Skip it if it's not a transform
     event.target.classList.remove('playing');
   }
 
